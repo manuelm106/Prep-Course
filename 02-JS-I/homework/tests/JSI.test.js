@@ -48,7 +48,7 @@ describe('nuevoNum', function() {
 });
 
 describe('nuevoBool', function() {
-  it('Deberia ser un booleano', function() {
+  it('hola deberia ser un booleano', function() {
     expect(typeof nuevoBool).toBe('boolean');
   });
 });
@@ -62,7 +62,7 @@ describe('nuevaResta', function() {
 describe('nuevaMultiplicacion', function() {
   it('Deberia ser un booleano', function() {
     expect(nuevaMultiplicacion).toBe(true);
-  });
+  }); 
 });
 
 describe('nuevoModulo', function() {
