@@ -215,7 +215,7 @@
           highlight(w.id, true)
         }
       }, [
-        el('input', { type: 'text', placeholder: 'Escribí tu propia frase con «' + w.word + '»', 'aria-label': 'Nuevo ejemplo' }),
+        el('input', { type: 'text', placeholder: 'Escribe tu propia frase con «' + w.word + '»', 'aria-label': 'Nuevo ejemplo' }),
         el('button', { type: 'submit', class: 'btn small', text: 'Agregar' })
       ])
     ])
@@ -374,7 +374,7 @@
   maxInput.addEventListener('change', onRangeChange)
 
   $('#notif-test').addEventListener('click', function () {
-    if (!state.words.length) { toast('Primero agregá alguna palabra a la lista.', 'info'); return }
+    if (!state.words.length) { toast('Primero agrega alguna palabra a la lista.', 'info'); return }
     if (notificationsSupported() && Notification.permission === 'default') Notification.requestPermission()
     fire()
   })
@@ -387,7 +387,7 @@
     if (!notificationsSupported()) {
       status.textContent = 'Tu navegador no soporta notificaciones del sistema: los avisos se mostrarán dentro de la página.'
     } else if (Notification.permission === 'denied') {
-      status.textContent = 'Bloqueaste las notificaciones para este sitio. Se mostrarán solo dentro de la página (podés habilitarlas desde la configuración del navegador).'
+      status.textContent = 'Bloqueaste las notificaciones para este sitio. Se mostrarán solo dentro de la página (puedes habilitarlas desde la configuración del navegador).'
     } else if (Notification.permission === 'default') {
       status.textContent = 'Al activar, el navegador te pedirá permiso para mostrar notificaciones.'
     } else {
@@ -399,7 +399,7 @@
   function renderCountdown () {
     var box = $('#notif-next')
     if (!state.settings.enabled) { box.textContent = 'Notificaciones desactivadas.'; return }
-    if (!state.words.length) { box.textContent = 'Agregá palabras para empezar a recibir ejemplos.'; return }
+    if (!state.words.length) { box.textContent = 'Agrega palabras para empezar a recibir ejemplos.'; return }
     if (!state.nextAt) { box.textContent = ''; return }
     var s = Math.max(0, Math.round((state.nextAt - Date.now()) / 1000))
     var m = Math.floor(s / 60)
